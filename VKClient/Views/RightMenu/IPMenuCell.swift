@@ -34,4 +34,5 @@ class IPMenuCell: UITableViewCell {
     static public func identifier() -> String {
         return "menuCell"
     }
+    
 }

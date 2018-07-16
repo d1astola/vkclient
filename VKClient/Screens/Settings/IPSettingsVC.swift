@@ -22,4 +22,5 @@ class IPSettingsVC: UIViewController {
         self.helper.setupHamburgerButton(self.navigationItem, drawer: drawer)
         self.helper.applyStyle((self.navigationController?.navigationBar)!)
     }
+    
 }

@@ -37,4 +37,5 @@ class IPMenuVC: UIViewController {
             self.delegate?.changeCenter(storyboard)
         }
     }
+    
 }

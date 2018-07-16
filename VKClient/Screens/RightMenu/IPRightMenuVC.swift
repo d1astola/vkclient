@@ -36,4 +36,5 @@ class IPRightMenuVC: MMDrawerController, IPMenuDelegate {
         self.centerViewController = centerStoryboard.instantiateInitialViewController()
         self.toggle(.left, animated: true, completion: nil)
     }
+    
 }

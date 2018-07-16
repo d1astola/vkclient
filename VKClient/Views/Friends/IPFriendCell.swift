@@ -45,4 +45,5 @@ class IPFriendCell: UITableViewCell {
     static public func identifier() -> String {
         return "friendsCell"
     }
+    
 }

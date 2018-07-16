@@ -25,4 +25,5 @@ class IPFriendsVC: UIViewController {
         tableView.dataSource = dataSource
         dataSource.updateFriends()
     }
+    
 }

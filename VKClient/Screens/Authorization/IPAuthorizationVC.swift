@@ -44,5 +44,5 @@ class IPAuthorizationVC: UIViewController {
     @IBAction func signinButtonAction(_ sender: UIButton) {
         
     }
+    
 }
-

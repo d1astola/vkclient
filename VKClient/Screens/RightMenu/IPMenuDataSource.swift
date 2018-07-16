@@ -35,4 +35,5 @@ class IPMenuDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
         tableViewAction(menuProvider.storyboard(indexPath.row))
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
 }

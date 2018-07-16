@@ -41,4 +41,5 @@ class IPProfileHeaderCell: UITableViewCell {
         self.nameLabel.text = String.init(format: "%@ %@", profile.firstName ?? "err", profile.secondName ?? "err")
         self.statusLabel.text = profile.status
     }
+    
 }
