@@ -37,7 +37,7 @@ class IPVKDownloadManager: NSObject {
     @objc public func updateInformationAboutMe() {
         let request = VKApi.users().get(["fields" : "photo_100, status"])
         request?.execute(resultBlock: { (response) in
-            let array = response?.json as! Array<Dictionary<String, Any>>
+            let array = response?.json as? Array<Dictionary<String, Any>> ?? Array()
             self.profileCoreData.addProfileInfo(dictionary: array[0])
             self.runNextOperation()
         }, errorBlock: nil)
@@ -46,8 +46,8 @@ class IPVKDownloadManager: NSObject {
     @objc public func updateInformationAboutMyFriends() {
         let request = VKApi.friends().get(["fields" : "photo_100, online"])
         request?.execute(resultBlock: { (response) in
-            let dict = response?.json as! Dictionary<String, Any>
-            let friendsArray = dict["items"] as! Array<Dictionary<String, Any>>
+            let dict = response?.json as? Dictionary<String, Any> ?? Dictionary()
+            let friendsArray = dict["items"] as? Array<Dictionary<String, Any>> ?? Array()
             self.friendsCoreData.addFriends(friendsArray)
             self.runNextOperation()
         }, errorBlock: { (error) in

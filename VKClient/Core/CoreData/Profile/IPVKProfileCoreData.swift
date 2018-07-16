@@ -20,7 +20,7 @@ class IPVKProfileCoreData: NSObject {
             profile?.avatarURL = dictionary["photo_100"] as? String
             profile?.firstName = dictionary["first_name"] as? String
             profile?.secondName = dictionary["last_name"] as? String
-            profile?.id = dictionary["id"] as! Int64
+            profile?.id = dictionary["id"] as? Int64 ?? 1
             profile?.status = dictionary["status"] as? String
         })
     }

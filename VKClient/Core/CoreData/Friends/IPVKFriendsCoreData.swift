@@ -40,8 +40,8 @@ class IPVKFriendsCoreData: NSObject {
             frnd?.avatarURL = friend["photo_100"] as? String
             frnd?.firstName = friend["first_name"] as? String
             frnd?.secondName = friend["last_name"] as? String
-            frnd?.online = friend["online"] as! Bool
-            frnd?.id = friend["id"] as! Int64
+            frnd?.online = friend["online"] as? Bool ?? false
+            frnd?.id = friend["id"] as? Int64 ?? 1
         })
     }
     

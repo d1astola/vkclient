@@ -24,8 +24,7 @@ class IPVKUIManager: NSObject, VKSdkUIDelegate {
     // MARK: - VKSdkUIDelegate
     
     func vkSdkShouldPresent(_ controller: UIViewController!) {
-        if (self.currentViewController != nil)
-        {
+        if self.currentViewController != nil {
             if (self.currentViewController?.presentedViewController != nil) {
                 self.currentViewController?.dismiss(animated: true, completion: {
                     self.currentViewController?.present(controller, animated: true, completion: nil)
@@ -33,9 +32,7 @@ class IPVKUIManager: NSObject, VKSdkUIDelegate {
             } else {
                 self.currentViewController?.present(controller, animated: true, completion: nil)
             }
-        }
-        else
-        {
+        } else {
             print("IPVKUIManager error: currentViewController is nil")
         }
     }

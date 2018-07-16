@@ -10,7 +10,7 @@ import UIKit
 import VK_ios_sdk
 
 class IPVKAuthManager: NSObject, VKSdkDelegate {
-    
+
     private var manager: IPVKManager?
     
     public func configure(_ manager: IPVKManager) {
