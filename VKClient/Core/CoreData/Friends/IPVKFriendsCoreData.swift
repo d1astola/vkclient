@@ -44,4 +44,5 @@ class IPVKFriendsCoreData: NSObject {
             frnd?.id = friend["id"] as! Int64
         })
     }
+    
 }

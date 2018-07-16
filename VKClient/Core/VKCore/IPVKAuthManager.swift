@@ -25,4 +25,5 @@ class IPVKAuthManager: NSObject, VKSdkDelegate {
     func vkSdkUserAuthorizationFailed() {
         print("IPVKAuthManager error: Authorize failed")
     }
+    
 }

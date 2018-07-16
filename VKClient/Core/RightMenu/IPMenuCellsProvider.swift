@@ -41,4 +41,5 @@ class IPMenuCellsProvider: NSObject {
         }
         return storyboard
     }
+    
 }

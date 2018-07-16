@@ -65,6 +65,7 @@ class IPVKDownloadManager: NSObject {
             delegate?.downloadedSuccessful()
         }
     }
+    
 }
 
 class IPDownloadQueueManager: NSObject {
@@ -87,4 +88,5 @@ class IPDownloadQueueManager: NSObject {
     public func queueIsEmpty() -> Bool {
         return queue.isEmpty
     }
+    
 }

@@ -19,4 +19,5 @@ extension MMDrawerController {
     @objc private func openLeftSideMenu() {
         self.toggle(.left, animated: true, completion: nil)
     }
+    
 }

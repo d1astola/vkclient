@@ -37,7 +37,7 @@ class IPVKManager: NSObject {
     
     public func authorize() {
         VKSdk.wakeUpSession(vkAuthScope, complete: { (vkAuthState, vkError) in
-            if (vkAuthState == VKAuthorizationState.authorized) {
+            if vkAuthState == VKAuthorizationState.authorized {
                 print("IPVKManager: Already authorized")
                 self.loadInformation()
             }
@@ -54,6 +54,7 @@ class IPVKManager: NSObject {
     public func showProfileScreen() {
         vkUIManager.showProfile()
     }
+    
 }
 
 extension IPVKManager: IPVKDownloadManagerDelegate {
@@ -61,4 +62,5 @@ extension IPVKManager: IPVKDownloadManagerDelegate {
     func downloadedSuccessful() {
         self.showProfileScreen()
     }
+    
 }

@@ -19,4 +19,5 @@ class IPNavigationBarHelper: NSObject {
     public func setupHamburgerButton(_ navItem: UINavigationItem, drawer: IPRightMenuVC) {
         navItem.setLeftBarButton(drawer.leftButton(), animated: true)
     }
+    
 }

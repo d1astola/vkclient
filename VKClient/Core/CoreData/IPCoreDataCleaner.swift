@@ -20,4 +20,5 @@ class IPCoreDataCleaner: NSObject {
     public func cleanIPVKFriends() {
         IPVKFriends.mr_truncateAll()
     }
+    
 }

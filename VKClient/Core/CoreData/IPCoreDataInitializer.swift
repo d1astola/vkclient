@@ -17,4 +17,5 @@ class IPCoreDataInitializer: NSObject {
         MagicalRecord.setupCoreDataStack(withStoreNamed: "IPVKProfile")
         MagicalRecord.setupCoreDataStack(withStoreNamed: "IPVKFriends")
     }
+    
 }

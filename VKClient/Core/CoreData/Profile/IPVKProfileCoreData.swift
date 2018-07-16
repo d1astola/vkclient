@@ -38,4 +38,5 @@ class IPVKProfileCoreData: NSObject {
         profile?.id = 0
         return profile!
     }
+    
 }

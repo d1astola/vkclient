@@ -43,4 +43,5 @@ class IPVKUIManager: NSObject, VKSdkUIDelegate {
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
         
     }
+    
 }
