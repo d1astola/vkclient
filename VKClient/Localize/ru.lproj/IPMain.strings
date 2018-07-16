@@ -1,0 +1,19 @@
+/* 
+  IPMain.strings
+  VKClient
+
+  Created by Tester on 6/27/18.
+  Copyright © 2018 Igor Pak. All rights reserved.
+*/
+
+"mainLogInButton" = "Войти";
+"mainSignInButton" = "Зарегистрироваться";
+"mainProfileTitle" = "Профиль";
+"mainExitButton" = "Выйти";
+"mainVersionLabel" = "Версия: ";
+"mainLoadingLabel" = "Загрузка...";
+"mainLoadingSuccessful" = "Загрузка завершена";
+"mainFriendOnlineStatus" = "Онлайн";
+"mainFriendOfflineStatus" = "Оффлайн";
+"mainFriendsTitle" = "Друзья";
+"mainSettingsTitle" = "Настройки";

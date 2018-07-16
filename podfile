@@ -1,0 +1,19 @@
+use_frameworks!
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+target 'VKClient' do
+    pod 'VK-ios-sdk', '~> 1.4'
+    pod 'MagicalRecord', '~> 2.3'
+    pod 'SDWebImage', '~> 4.3'
+    pod 'MMDrawerController', '~> 0.6'
+    pod 'Fabric'
+    pod 'Crashlytics'
+    pod 'SVProgressHUD'
+    pod 'ChameleonFramework'
+    
+    target 'VKClientTests' do
+        pod 'MMDrawerController', '~> 0.6'
+        pod 'Cuckoo'
+    end
+end

@@ -1,0 +1,11 @@
+/* 
+  IPMenuCells.strings
+  VKClient
+
+  Created by Tester on 6/26/18.
+  Copyright © 2018 Igor Pak. All rights reserved.
+*/
+
+"myProfileMenu" = "My Profile";
+"myFriendsMenu" = "My Friends";
+"mySettings" = "Settings";

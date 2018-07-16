@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AuthorizationVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="IPAuthorizationVC" customModule="VKClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Black VK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQf-Yw-Qez">
+                                <rect key="frame" x="96" y="132" width="182" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="X1o-7L-N10"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="33"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-CY-3AT">
+                                <rect key="frame" x="112" y="247" width="150" height="40"/>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="uLx-oL-piD"/>
+                                    <constraint firstAttribute="width" constant="150" id="xWj-qJ-q3U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NzM-mA-dJQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wys-dR-B1R">
+                                <rect key="frame" x="112" y="295" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4fk-3I-JrD"/>
+                                    <constraint firstAttribute="width" constant="150" id="JH3-Yt-2y3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JH3-Bm-RV9"/>
+                                    <action selector="signinButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BAz-t1-nqa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dQf-Yw-Qez" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="4z6-hw-Egi"/>
+                            <constraint firstItem="dQf-Yw-Qez" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lkl-qX-fKz"/>
+                            <constraint firstItem="KoH-CY-3AT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M1Z-Qo-7Fb"/>
+                            <constraint firstItem="wys-dR-B1R" firstAttribute="top" secondItem="KoH-CY-3AT" secondAttribute="bottom" constant="8" id="TfG-gg-HAC"/>
+                            <constraint firstItem="KoH-CY-3AT" firstAttribute="top" secondItem="dQf-Yw-Qez" secondAttribute="bottom" constant="75" id="pIt-BK-C0p"/>
+                            <constraint firstItem="wys-dR-B1R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vXr-uS-nVv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="0gu-Zf-Lvv"/>
+                    <connections>
+                        <outlet property="LoginButton" destination="KoH-CY-3AT" id="zRM-NI-j6l"/>
+                        <outlet property="SigninButton" destination="wys-dR-B1R" id="qEp-jA-UK6"/>
+                        <segue destination="9Am-qW-avG" kind="show" identifier="authorizedSuccessfully" id="ry5-BT-Ip5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="31.934032983508249"/>
+        </scene>
+        <!--MenuVC-->
+        <scene sceneID="RPZ-yf-eLq">
+            <objects>
+                <viewController storyboardIdentifier="menuVC" id="ur3-dq-rpT" customClass="IPMenuVC" customModule="VKClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ch2-Xx-bcY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wZH-rX-nkQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qu0-m7-blQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="-647"/>
+        </scene>
+        <!--Right MenuVC-->
+        <scene sceneID="OXg-no-zBI">
+            <objects>
+                <viewController id="9Am-qW-avG" customClass="IPRightMenuVC" customModule="VKClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pfg-uP-vw9"/>
+                        <viewControllerLayoutGuide type="bottom" id="lSY-Oi-FDf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GBf-kN-Obj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="SKN-qp-ohn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9f-vp-BQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2034" y="32"/>
+        </scene>
+    </scenes>
+</document>
