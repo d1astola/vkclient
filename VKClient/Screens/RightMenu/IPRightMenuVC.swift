@@ -10,7 +10,6 @@ import UIKit
 import MMDrawerController
 
 class IPRightMenuVC: MMDrawerController, IPMenuDelegate {
-    
 
     private var centerStoryboard: UIStoryboard = UIStoryboard(name: "Profile", bundle: Bundle.main)
     

@@ -21,38 +21,22 @@ class IPVKDownloadManager: NSObject {
     private let downloadQueue = IPDownloadQueueManager()
     private let profileCoreData = IPVKProfileCoreData()
     private let friendsCoreData = IPVKFriendsCoreData()
+    private let APIService = IPVKAPIService()
     
     public func downloadAll() {
         SVProgressHUD.show(withStatus: NSLocalizedString("mainLoadingLabel", tableName: "IPMain", bundle: Bundle.main, value: "", comment: ""))
         downloadQueue.clear()
         downloadQueue.push {
-            self.updateInformationAboutMe()
+            self.APIService.updateProfileInfo({
+                self.runNextOperation()
+            })
         }
         downloadQueue.push {
-            self.updateInformationAboutMyFriends()
+            self.APIService.updateFriends({
+                self.runNextOperation()
+            })
         }
         self.runNextOperation()
-    }
-
-    @objc public func updateInformationAboutMe() {
-        let request = VKApi.users().get(["fields" : "photo_100, status"])
-        request?.execute(resultBlock: { (response) in
-            let array = response?.json as? Array<Dictionary<String, Any>> ?? Array()
-            self.profileCoreData.addProfileInfo(dictionary: array[0])
-            self.runNextOperation()
-        }, errorBlock: nil)
-    }
-    
-    @objc public func updateInformationAboutMyFriends() {
-        let request = VKApi.friends().get(["fields" : "photo_100, online"])
-        request?.execute(resultBlock: { (response) in
-            let dict = response?.json as? Dictionary<String, Any> ?? Dictionary()
-            let friendsArray = dict["items"] as? Array<Dictionary<String, Any>> ?? Array()
-            self.friendsCoreData.addFriends(friendsArray)
-            self.runNextOperation()
-        }, errorBlock: { (error) in
-            
-        })
     }
     
     // MARK: - Private

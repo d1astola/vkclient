@@ -17,3 +17,5 @@
 "mainFriendOfflineStatus" = "Оффлайн";
 "mainFriendsTitle" = "Друзья";
 "mainSettingsTitle" = "Настройки";
+"mainFriendsSegmentedAll" = "Все";
+"mainFriendsSegmentedOnline" = "В сети";

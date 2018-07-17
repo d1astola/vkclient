@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pmg-U6-Rod">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pmg-U6-Rod">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,27 +13,55 @@
         <!--FriendsVC-->
         <scene sceneID="qCM-al-f1F">
             <objects>
-                <viewController id="uU1-wL-kWX" customClass="IPFriendsVC" customModule="VKClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="uU1-wL-kWX" customClass="IPFriendsVC" customModule="VKClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W9O-d3-it0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JXy-lA-Qtk">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgU-br-67O">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ukq-ut-KLs">
+                                        <rect key="frame" x="8" y="5" width="359" height="31"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="switchSegmentedControl:" destination="uU1-wL-kWX" eventType="valueChanged" id="PCD-Sv-9vj"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="V40-hL-8Zl"/>
+                                    <constraint firstItem="ukq-ut-KLs" firstAttribute="top" secondItem="hgU-br-67O" secondAttribute="top" constant="5" id="Vey-DM-Z1Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="ukq-ut-KLs" secondAttribute="bottom" constant="5" id="WJo-2Y-h8v"/>
+                                    <constraint firstItem="ukq-ut-KLs" firstAttribute="leading" secondItem="hgU-br-67O" secondAttribute="leading" constant="8" id="YZp-B6-Gta"/>
+                                    <constraint firstAttribute="trailing" secondItem="ukq-ut-KLs" secondAttribute="trailing" constant="8" id="xh2-03-OkA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JXy-lA-Qtk" firstAttribute="leading" secondItem="cw3-p1-sYB" secondAttribute="leading" id="9BR-qt-whL"/>
-                            <constraint firstItem="JXy-lA-Qtk" firstAttribute="top" secondItem="cw3-p1-sYB" secondAttribute="top" id="Ktr-Gw-mO5"/>
+                            <constraint firstItem="hgU-br-67O" firstAttribute="leading" secondItem="cw3-p1-sYB" secondAttribute="leading" id="MbE-LT-Ja2"/>
                             <constraint firstItem="JXy-lA-Qtk" firstAttribute="bottom" secondItem="cw3-p1-sYB" secondAttribute="bottom" id="NiG-e5-tPp"/>
+                            <constraint firstItem="JXy-lA-Qtk" firstAttribute="top" secondItem="hgU-br-67O" secondAttribute="bottom" id="NkK-2q-fKz"/>
                             <constraint firstItem="JXy-lA-Qtk" firstAttribute="trailing" secondItem="cw3-p1-sYB" secondAttribute="trailing" id="rTQ-V4-i6C"/>
+                            <constraint firstItem="cw3-p1-sYB" firstAttribute="trailing" secondItem="hgU-br-67O" secondAttribute="trailing" id="rjU-Ho-0TG"/>
+                            <constraint firstItem="hgU-br-67O" firstAttribute="top" secondItem="cw3-p1-sYB" secondAttribute="top" id="stb-cN-anV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cw3-p1-sYB"/>
                     </view>
                     <navigationItem key="navigationItem" id="rTP-xe-Szl"/>
                     <connections>
+                        <outlet property="segmentedControl" destination="ukq-ut-KLs" id="ZLH-nx-OoI"/>
                         <outlet property="tableView" destination="JXy-lA-Qtk" id="N8a-jG-aDV"/>
                     </connections>
                 </viewController>

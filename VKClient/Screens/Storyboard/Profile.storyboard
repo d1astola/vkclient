@@ -13,7 +13,7 @@
         <!--ProfileVC-->
         <scene sceneID="Dul-00-JP1">
             <objects>
-                <viewController storyboardIdentifier="profileScreenVC" autoresizesArchivedViewToFullSize="NO" id="cua-fa-FjB" customClass="IPProfileVC" customModule="VKClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileScreenVC" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="cua-fa-FjB" customClass="IPProfileVC" customModule="VKClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PT1-X3-Mjm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

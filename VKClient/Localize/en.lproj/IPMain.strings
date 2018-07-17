@@ -17,3 +17,5 @@
 "mainFriendOfflineStatus" = "Offline";
 "mainFriendsTitle" = "Friends";
 "mainSettingsTitle" = "Settings";
+"mainFriendsSegmentedAll" = "All";
+"mainFriendsSegmentedOnline" = "Online";

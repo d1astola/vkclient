@@ -28,6 +28,7 @@
 		8D5B6E8420E3966F00120D65 /* IPProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B6E8220E3966F00120D65 /* IPProfileVC.swift */; };
 		8D5B6E8D20E3CD3300120D65 /* IPMain.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B6E8F20E3CD3300120D65 /* IPMain.strings */; };
 		8D5B6E9420E3D73700120D65 /* MMDrawerController+LeftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B6E9320E3D73700120D65 /* MMDrawerController+LeftButton.swift */; };
+		8D72E1E720FE134800E3BF5C /* IPVKAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D72E1E620FE134800E3BF5C /* IPVKAPIService.swift */; };
 		8D8CC40D20BFEA0E009DB72E /* IPProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8CC40C20BFEA0E009DB72E /* IPProfileDataSource.swift */; };
 		8D9D30C620EBA785008508F0 /* IPNavigationBarHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D30C520EBA785008508F0 /* IPNavigationBarHelperTests.swift */; };
 		8D9D30C820EBAC0D008508F0 /* Pods_VKClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9D30C720EBAC0D008508F0 /* Pods_VKClient.framework */; };
@@ -99,6 +100,7 @@
 		8D5B6E8E20E3CD3300120D65 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/IPMain.strings; sourceTree = "<group>"; };
 		8D5B6E9020E3CD3600120D65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/IPMain.strings; sourceTree = "<group>"; };
 		8D5B6E9320E3D73700120D65 /* MMDrawerController+LeftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MMDrawerController+LeftButton.swift"; sourceTree = "<group>"; };
+		8D72E1E620FE134800E3BF5C /* IPVKAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPVKAPIService.swift; sourceTree = "<group>"; };
 		8D8CC40C20BFEA0E009DB72E /* IPProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPProfileDataSource.swift; sourceTree = "<group>"; };
 		8D9D30C520EBA785008508F0 /* IPNavigationBarHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPNavigationBarHelperTests.swift; sourceTree = "<group>"; };
 		8D9D30C720EBAC0D008508F0 /* Pods_VKClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_VKClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -430,6 +432,7 @@
 				8DF053E620BEE5A1007A51FC /* IPVKAuthManager.swift */,
 				8DF053E920BEF695007A51FC /* IPVKUIManager.swift */,
 				8DCB0AF820F88E290040FEB6 /* IPVKDownloadManager.swift */,
+				8D72E1E620FE134800E3BF5C /* IPVKAPIService.swift */,
 			);
 			path = VKCore;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				8DCB0AFF20F8E5510040FEB6 /* IPSettingsVC.swift in Sources */,
 				8DF053EA20BEF695007A51FC /* IPVKUIManager.swift in Sources */,
 				8DFBB1CA20E27A75004A1A7A /* IPMenuVC.swift in Sources */,
+				8D72E1E720FE134800E3BF5C /* IPVKAPIService.swift in Sources */,
 				8D5B6E9420E3D73700120D65 /* MMDrawerController+LeftButton.swift in Sources */,
 				8690899420BF474E0087F204 /* IPVKProfileCoreData.swift in Sources */,
 				86FF8A6020E52455000FE7F0 /* IPNavigationBarHelper.swift in Sources */,

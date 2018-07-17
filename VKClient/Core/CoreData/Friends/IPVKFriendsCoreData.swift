@@ -21,18 +21,6 @@ class IPVKFriendsCoreData: NSObject {
         }
     }
     
-    public func countOfFriends() -> Int {
-        return Int(IPVKFriends.mr_countOfEntities())
-    }
-    
-    public func updateFriends() {
-        friendsArray = IPVKFriends.mr_findAllSorted(by: "creationDate", ascending: true) as! Array<IPVKFriends>
-    }
-    
-    public func friend(at index: Int) -> IPVKFriends {
-        return friendsArray[index]
-    }
-    
     private func addFriend(_ friend: Dictionary<String, Any>) {
         MagicalRecord.save({ (context) in
             let frnd = IPVKFriends.mr_createEntity(in: context)
