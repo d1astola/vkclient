@@ -9,6 +9,7 @@
 import UIKit
 import MagicalRecord
 import SVProgressHUD
+import Differ
 
 class IPFriendsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,10 +17,12 @@ class IPFriendsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
     private let APIService = IPVKAPIService()
     private var fetchedResultsController: NSFetchedResultsController<IPVKFriends>?
     private var tableView: UITableView?
+    private var oldData: [IPVKFriends] = Array()
     
     public func configure(_ tableView: UITableView) {
         self.tableView = tableView
         self.fetchedResultsController = IPVKFriends.mr_fetchAllSorted(by: "creationDate", ascending: false, with: nil, groupBy: nil, delegate: self) as? NSFetchedResultsController<IPVKFriends>
+        self.oldData = fetchedResultsController?.fetchedObjects ?? Array()
     }
     
     public func switchSegmentedControl(_ value: Int) {
@@ -29,10 +32,10 @@ class IPFriendsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
             self.fetchedResultsController = IPVKFriends.mr_fetchAllSorted(by: "creationDate", ascending: false, with: NSPredicate(format: "online = true"), groupBy: nil, delegate: self) as? NSFetchedResultsController<IPVKFriends>
         }
         SVProgressHUD.show()
-        self.tableView?.isHidden = true
         APIService.updateFriends {
             SVProgressHUD.dismiss()
-            self.tableView?.isHidden = false
+            self.tableView?.animateRowChanges(oldData: self.oldData, newData: self.fetchedResultsController?.fetchedObjects ?? Array())
+            self.oldData = self.fetchedResultsController?.fetchedObjects ?? Array()
         }
     }
     
@@ -65,7 +68,9 @@ class IPFriendsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
 extension IPFriendsDataSource: NSFetchedResultsControllerDelegate {
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        self.tableView?.reloadData()
+//        self.tableView?.reloadData()
+//        self.tableView?.animateRowChanges(oldData: self.oldData, newData: controller.fetchedObjects as? [IPVKFriends] ?? Array())
+//        self.oldData = self.fetchedResultsController?.fetchedObjects ?? Array()
     }
     
 }
