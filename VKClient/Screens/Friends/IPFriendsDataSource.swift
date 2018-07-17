@@ -21,15 +21,15 @@ class IPFriendsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
     
     public func configure(_ tableView: UITableView) {
         self.tableView = tableView
-        self.fetchedResultsController = IPVKFriends.mr_fetchAllSorted(by: "creationDate", ascending: false, with: nil, groupBy: nil, delegate: self) as? NSFetchedResultsController<IPVKFriends>
+        self.fetchedResultsController = IPVKFriends.mr_fetchAllSorted(by: "creationDate", ascending: false, with: nil, groupBy: nil, delegate: nil) as? NSFetchedResultsController<IPVKFriends>
         self.oldData = fetchedResultsController?.fetchedObjects ?? Array()
     }
     
     public func switchSegmentedControl(_ value: Int) {
         if value == 0 {
-            self.fetchedResultsController = IPVKFriends.mr_fetchAllSorted(by: "creationDate", ascending: false, with: nil, groupBy: nil, delegate: self) as? NSFetchedResultsController<IPVKFriends>
+            self.fetchedResultsController = IPVKFriends.mr_fetchAllSorted(by: "creationDate", ascending: false, with: nil, groupBy: nil, delegate: nil) as? NSFetchedResultsController<IPVKFriends>
         } else {
-            self.fetchedResultsController = IPVKFriends.mr_fetchAllSorted(by: "creationDate", ascending: false, with: NSPredicate(format: "online = true"), groupBy: nil, delegate: self) as? NSFetchedResultsController<IPVKFriends>
+            self.fetchedResultsController = IPVKFriends.mr_fetchAllSorted(by: "creationDate", ascending: false, with: NSPredicate(format: "online = true"), groupBy: nil, delegate: nil) as? NSFetchedResultsController<IPVKFriends>
         }
         SVProgressHUD.show()
         APIService.updateFriends {
@@ -61,16 +61,6 @@ class IPFriendsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-}
-
-extension IPFriendsDataSource: NSFetchedResultsControllerDelegate {
-    
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-//        self.tableView?.reloadData()
-//        self.tableView?.animateRowChanges(oldData: self.oldData, newData: controller.fetchedObjects as? [IPVKFriends] ?? Array())
-//        self.oldData = self.fetchedResultsController?.fetchedObjects ?? Array()
     }
     
 }
