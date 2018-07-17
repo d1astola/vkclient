@@ -11,6 +11,7 @@ target 'VKClient' do
     pod 'Crashlytics'
     pod 'SVProgressHUD'
     pod 'ChameleonFramework'
+    pod 'Differ'
     
     target 'VKClientTests' do
         pod 'MMDrawerController', '~> 0.6'
